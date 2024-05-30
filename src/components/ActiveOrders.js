@@ -110,7 +110,7 @@ const ActiveOrders = () => {
             <Tr key={order.id} p={4} borderWidth="1px" borderRadius="lg" mb={2}>
               <Td>{order.customer_id}</Td>
               <Td>{getCustomerName(order.customer_id)}</Td>
-              <Td>{order.items[0].price}</Td>
+              <Td>{order.price ? order.price : order.items[0].price}</Td>
               <Td>{order.invoice_no}</Td>
               <Td>{order.invoice_date}</Td>
               <Td>

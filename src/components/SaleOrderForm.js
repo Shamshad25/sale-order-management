@@ -20,7 +20,7 @@ const SaleOrderForm = ({ onSubmit, defaultValues }) => {
       customer_id: "",
       sku_id: "",
       price: 0,
-      quantity: 1,
+      quantity: 0,
       paid: false,
       invoice_date: new Date(),
       invoice_no: "",
@@ -41,9 +41,24 @@ const SaleOrderForm = ({ onSubmit, defaultValues }) => {
       setValue("customer_id", defaultValues?.customer_id);
       setValue("invoice_no", defaultValues?.invoice_no);
       setValue("invoice_date", new Date(defaultValues?.invoice_date));
-      setValue("sku_id", defaultValues?.items[0]?.sku_id);
-      setValue("price", defaultValues?.items[0]?.price);
-      setValue("quantity", defaultValues?.items[0]?.quantity);
+      setValue(
+        "sku_id",
+        defaultValues?.sku_id
+          ? defaultValues?.sku_id
+          : defaultValues?.items[0]?.sku_id
+      );
+      setValue(
+        "price",
+        defaultValues?.price
+          ? defaultValues?.price
+          : defaultValues?.items[0]?.price
+      );
+      setValue(
+        "quantity",
+        defaultValues?.quantity
+          ? defaultValues?.quantity
+          : defaultValues?.items[0]?.quantity
+      );
       setValue("paid", defaultValues?.paid);
       setSelectedProducts(defaultValues?.products || []);
     }
