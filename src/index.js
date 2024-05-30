@@ -18,7 +18,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <ChakraProvider theme={theme}>
-        <App />
+        <div className="App">
+          <App />
+        </div>
       </ChakraProvider>
     </Provider>
   </React.StrictMode>
