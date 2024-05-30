@@ -8,7 +8,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleSubmit = () => {
-    if (username === "user" && password === "password") {
+    if (username === "admin" && password === "admin123") {
       localStorage.setItem("authenticated", "true");
       navigate("/");
     } else {
