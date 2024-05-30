@@ -3,13 +3,13 @@ import Login from "./pages/Login";
 import Home from "./pages/Home";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import React from "react";
-import "./App.css";
+import { Box } from "@chakra-ui/react";
 
 const queryClient = new QueryClient();
 
 function App() {
   return (
-    <div className="box">
+    <Box display={"grid"} justifyContent={"center"}>
       <QueryClientProvider client={queryClient}>
         <Router>
           <Routes>
@@ -18,7 +18,7 @@ function App() {
           </Routes>
         </Router>
       </QueryClientProvider>
-    </div>
+    </Box>
   );
 }
 

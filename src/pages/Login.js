@@ -23,7 +23,7 @@ const Login = () => {
       borderWidth={1}
       borderRadius="lg"
       overflow="hidden"
-      background={"white"}
+      mt={120}
     >
       <Text
         textAlign={"center"}

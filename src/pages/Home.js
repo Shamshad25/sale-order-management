@@ -26,7 +26,7 @@ const Home = () => {
   }, [navigate]);
 
   return (
-    <Box p={4}>
+    <Box p={4} width={"100vw"}>
       <Flex justifyContent="space-between" mb={4}>
         <Button onClick={toggleColorMode}>
           Toggle {colorMode === "light" ? "Dark" : "Light"}
